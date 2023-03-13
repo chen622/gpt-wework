@@ -11,9 +11,9 @@ func main() {
 	r.GET("/ping", Ping)
 	r.GET("/wechat/check", service.CheckWeixinSign)
 	r.POST("/wechat/check", service.TalkWeixin)
-	r.Run(":8888")
+	r.Run(":80")
 }
 
 func Ping(c *gin.Context) {
-	c.Data(500, "text/plain;charset=utf-8", []byte("ff"))
+	c.Data(200, "text/plain;charset=utf-8", []byte("pong"))
 }
