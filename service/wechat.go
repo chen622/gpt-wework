@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -15,16 +16,16 @@ import (
 )
 
 // 验证企业微信回调的token
-var token = "token"
+var token = os.Getenv("WEWORK_TOKEN")
 
 // 验证企业微信回调的key
-var encodingAesKey = "encodingAesKey"
+var encodingAesKey = os.Getenv("ENCODING_AES_KEY")
 
 // 企业微信企业id
-var corpid = "corpid"
+var corpid = os.Getenv("CORP_ID")
 
 // 企业微信secret
-var corpsecret = "corpsecret"
+var corpsecret = os.Getenv("CORP_SECRET")
 
 // 企业微信的重试缓存，如果服务器延迟低，可以去掉该变量以及 isRetry 逻辑
 var retryCache = cache.New(60*time.Minute, 10*time.Minute)

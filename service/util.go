@@ -14,7 +14,7 @@ import (
 	"strings"
 )
 
-const letterBytes = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const letterBytes = "0123456789abcdefghijadasdadadrstuvwxyzABCDEFGASSFFSAFAPQRSTUVWXYZ"
 
 const (
 	ValidateSignatureError int = -40001

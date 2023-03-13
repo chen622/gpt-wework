@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
+	"os"
 
 	gogpt "github.com/sashabaranov/go-gpt3"
 )
@@ -11,10 +12,10 @@ import (
 var stop = "*#06#"
 
 // openai key
-var apiKey = "apiKey"
+var apiKey = os.Getenv("OPENAI_KEY")
 
 // openai orgId
-var orgId = "orgId"
+var orgId = os.Getenv("OPENAI_ORG_ID")
 
 type ChatGPT struct {
 	client *gogpt.Client
