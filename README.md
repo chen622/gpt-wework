@@ -15,11 +15,6 @@
 - 能够媲美原生的体验：私聊，分享，翻译等等。
 - 技术上和微信解耦
 
-微信扫码关注
-
-![](https://raw.githubusercontent.com/razertory/statics/main/staic/wechat_official_qr.jpg)
-
-> 回复「客服」体验最终效果
 
 
 ## 开发要求
