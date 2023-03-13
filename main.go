@@ -8,10 +8,10 @@ import (
 
 func main() {
 	r := gin.Default()
-	r.GET("/ping", Ping)
-	r.GET("/wechat/check", service.CheckWeixinSign)
-	r.POST("/wechat/check", service.TalkWeixin)
-	r.Run(":80")
+	r.GET("/health", Ping)
+	r.GET("/wework/gpt-api", service.CheckWeixinSign)
+	r.POST("/wework/gpt-api", service.TalkWeixin)
+	r.Run()
 }
 
 func Ping(c *gin.Context) {
